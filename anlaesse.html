@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="img/icon/icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Unsere Anlässe – Von Hochzeiten über Sektempfänge bis hin zu Geburtstagen und Firmenevents mit der mobilen Ape-Bar.">
+  <title>Anlässe & Pakete | MORE APE por favor</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+
+          colors: {
+
+            /* Warmes italienisches Creme */
+            sand: {
+              50: '#FFF9E6',
+              100: '#FFF0C2',
+              200: '#F5D98B',
+              300: '#E8BD62',
+              800: '#62432E',
+              900: '#3B271C',
+            },
+
+            /* Basilikum / Oliven */
+            olive: {
+              100: '#E3E8B6',
+              300: '#A8B85B',
+              500: '#6E8737',
+              700: '#3F652F',
+              800: '#294A25',
+            },
+
+            /* Pomodoro */
+            tomato: {
+              100: '#FFD8CE',
+              300: '#FF8A70',
+              500: '#E8422E',
+              600: '#CE2E20',
+              700: '#A92119',
+            },
+
+            /* Italienisches kräftiges Rot */
+            italianRed: {
+              100: '#FFD9D5',
+              300: '#F5796E',
+              500: '#D62828',
+              600: '#B91F24',
+              700: '#8E181D',
+            },
+
+            /* Amalfi-Zitrone */
+            lemon: {
+              100: '#FFF8B0',
+              300: '#FFE35A',
+              400: '#FFD92F',
+              500: '#F7C900',
+              600: '#D9A900',
+            },
+
+            /* Vespa / Mittelmeer */
+            mediterranean: {
+              100: '#D8F2F5',
+              300: '#75CED9',
+              500: '#209BAD',
+              600: '#087F95',
+              700: '#076274',
+            },
+
+            /* Terrakotta */
+            terracotta: {
+              100: '#F9DED0',
+              300: '#E79A73',
+              500: '#C65D38',
+              600: '#A9472B',
+              700: '#84351F',
+            },
+
+            /* Italienisches Grün */
+            italianGreen: {
+              100: '#D9EBD8',
+              300: '#7EB47B',
+              500: '#3D8B40',
+              600: '#287431',
+              700: '#1D5B27',
+            }
+          }
+        }
+      }
+    }
+
+
+
+  </script>
+</head>
+
+<body class="bg-sand-50 text-sand-900 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-sand-50/95 backdrop-blur-md border-b border-sand-200">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-4 text-left self-center -ml-6 md:-ml-12 lg:-ml-16">
+        <!-- PNG/JPG Platzhalter -->
+
+        <div class="flex items-baseline gap-2">
+          <span class="font-serif text-lg md:text-xl tracking-widest uppercase font-bold text-sand-900 leading-none">
+            MORE APE
+          </span>
+          <span class="font-serif italic text-xs text-sand-600">
+            por favor
+          </span>
+        </div>
+      </a>
+
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-sand-800">
+        <a href="index.html" class="hover:text-olive-700 transition-colors">Startseite</a>
+        <a href="anlaesse.html" class="hover:text-olive-700 transition-colors">Anlässe</a>
+        <a href="ueber-uns.html" class="text-olive-700 font-semibold transition-colors">Über uns</a>
+        <a href="index.html#kontakt" class="px-6 py-3 rounded-full 
+          bg-tomato-500 text-white
+          hover:bg-italianRed-600
+          transition-all font-bold">
+          Jetzt anfragen
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="menu-btn" type="button"
+        class="md:hidden p-2 rounded-lg text-sand-900 hover:bg-sand-100 focus:outline-none" aria-label="Menü öffnen">
+        <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+          </path>
+        </svg>
+        <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+          </path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-sand-200 bg-sand-50/98 px-6 py-6 space-y-4 shadow-lg">
+      <a href="index.html"
+        class="mobile-link block text-base font-medium text-sand-800 hover:text-olive-700 transition-colors">Startseite</a>
+      <a href="anlaesse.html"
+        class="mobile-link block text-base font-medium text-sand-800 hover:text-olive-700 transition-colors">Anlässe</a>
+      <a href="ueber-uns.html" class="mobile-link block text-base font-semibold text-olive-700">Über uns</a>
+      <div class="pt-2">
+        <a href="index.html#kontakt" class="mobile-link block text-center w-full py-3 rounded-xl 
+           bg-tomato-500 text-white font-semibold text-sm
+           hover:bg-italianRed-600 transition-all duration-300 shadow-md">
+          Jetzt anfragen
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header der Unterseite -->
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
+      <span class="inline-block text-xs font-semibold tracking-widest text-olive-700 uppercase">
+        Für jede Feier das Passende
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl text-sand-900 leading-tight">
+        Unsere Event-Konzepte
+      </h1>
+      <p class="text-sand-800 text-base sm:text-lg font-light leading-relaxed">
+        Egal ob intimer Sektempfang oder großes Sommerfest – unsere Ape lässt sich flexibel an eure Wünsche und euren
+        Zeitplan anpassen.
+      </p>
+    </div>
+
+    <div class="space-y-24">
+
+      <!-- Sektion 1: Sektempfang -->
+    <!-- Sektion 1: Sektempfang -->
+<section id="sektempfang"
+  class="scroll-mt-28 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center
+         border-2 border-lemon-300 bg-gradient-to-br from-sand-50 via-lemon-100/60 to-sand-50
+         rounded-3xl p-8 sm:p-12 shadow-lg shadow-lemon-100/40">
+
+  <!-- Italien-Streifen -->
+  <div class="absolute top-0 left-0 right-0 h-1.5 flex">
+    <div class="flex-1 bg-italianGreen-500"></div>
+    <div class="flex-1 bg-white"></div>
+    <div class="flex-1 bg-italianRed-500"></div>
+  </div>
+
+  <div class="space-y-5">
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lemon-300 text-sand-900 text-xs font-bold shadow-sm">
+      🥂 Beliebt für Standesamt & Kirche
+    </div>
+
+    <h2 class="font-serif text-3xl sm:text-4xl text-terracotta-600 font-bold leading-tight">
+      Sektempfang nach der Trauung
+    </h2>
+
+    <p class="text-sand-800 text-sm leading-relaxed">
+      Der perfekte Start direkt nach dem Ja-Wort: Wir positionieren die Ape vor dem Standesamt oder der Kirche.
+      Eure Gäste werden sofort mit eisgekühltem Sekt, Prosecco oder erfrischenden alkoholfreien Drinks begrüßt.
+    </p>
+
+    <ul class="text-xs sm:text-sm text-sand-800 space-y-3 pt-2">
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Eisgekühlte Zinkwannen für Getränke
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Liebevoll dekorierter Stehtisch & Sonnenschirm
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Unkomplizierte Anfahrt & zügiger Aufbau
+      </li>
+    </ul>
+
+    <div class="pt-4">
+      <a href="index.html#kontakt"
+        class="inline-block px-7 py-3 rounded-full bg-tomato-500 text-white text-xs uppercase tracking-wider
+               font-bold shadow-md hover:bg-italianRed-600 hover:-translate-y-0.5 transition-all">
+        Sektempfang anfragen
+      </a>
+    </div>
+  </div>
+
+  <div class="relative rounded-2xl overflow-hidden h-72 sm:h-96 border-4 border-white shadow-xl">
+    <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80"
+      alt="Sektempfang Gläser"
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+
+    <span
+      class="absolute bottom-4 right-4 px-4 py-2 bg-lemon-300 text-sand-900 rounded-full
+             text-sm font-serif italic font-bold shadow-lg">
+      Salute! 🥂
+    </span>
+  </div>
+</section>
+
+
+<!-- Sektion 2: Hochzeiten -->
+<section id="hochzeiten"
+  class="scroll-mt-28 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center
+         border-2 border-tomato-300 bg-gradient-to-br from-sand-50 via-tomato-100/40 to-sand-50
+         rounded-3xl p-8 sm:p-12 shadow-lg shadow-tomato-100/40">
+
+  <div class="absolute top-0 left-0 right-0 h-1.5 flex">
+    <div class="flex-1 bg-italianGreen-500"></div>
+    <div class="flex-1 bg-white"></div>
+    <div class="flex-1 bg-italianRed-500"></div>
+  </div>
+
+  <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden h-72 sm:h-96 border-4 border-white shadow-xl">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"
+      alt="Hochzeitsdekoration"
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+
+    <span
+      class="absolute bottom-4 left-4 px-4 py-2 bg-tomato-500 text-white rounded-full
+             text-sm font-serif italic font-bold shadow-lg">
+      Amore ❤️
+    </span>
+  </div>
+
+  <div class="space-y-5 order-1 md:order-2">
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-tomato-100 text-italianRed-700
+             text-xs font-bold shadow-sm">
+      💍 Das Hochzeits-Highlight
+    </div>
+
+    <h2 class="font-serif text-3xl sm:text-4xl text-italianRed-600 font-bold leading-tight">
+      Hochzeitsfeiern & Freie Trauungen
+    </h2>
+
+    <p class="text-sand-800 text-sm leading-relaxed">
+      Macht eure Hochzeitslocation noch besonderer. Die Piaggio Ape dient den ganzen Tag als stilvolle Cocktail-
+      oder Aperitif-Bar und ist gleichzeitig das beliebteste Fotomotiv für Brautpaar und Gäste.
+    </p>
+
+    <ul class="text-xs sm:text-sm text-sand-800 space-y-3 pt-2">
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Individuelle Dekoration passend zu eurem Hochzeitsmotto
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Perfekt als Aperol-Spritz- oder Gin-Tonic-Bar
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Begleitung über den gesamten Nachmittag / Abend möglich
+      </li>
+    </ul>
+
+    <div class="pt-4">
+      <a href="index.html#kontakt"
+        class="inline-block px-7 py-3 rounded-full bg-italianRed-500 text-white text-xs uppercase tracking-wider
+               font-bold shadow-md hover:bg-italianRed-700 hover:-translate-y-0.5 transition-all">
+        Hochzeits-Ape sichern
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sektion 3: Geburtstage -->
+<section id="geburtstage"
+  class="scroll-mt-28 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center
+         border-2 border-mediterranean-300
+         bg-gradient-to-br from-sand-50 via-mediterranean-100/50 to-sand-50
+         rounded-3xl p-8 sm:p-12 shadow-lg">
+
+  <div class="absolute top-0 left-0 right-0 h-1.5 flex">
+    <div class="flex-1 bg-italianGreen-500"></div>
+    <div class="flex-1 bg-white"></div>
+    <div class="flex-1 bg-italianRed-500"></div>
+  </div>
+
+  <div class="space-y-5">
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+             bg-mediterranean-100 text-mediterranean-700 text-xs font-bold shadow-sm">
+      🎉 Private Partys & Jubiläen
+    </div>
+
+    <h2 class="font-serif text-3xl sm:text-4xl text-mediterranean-700 font-bold leading-tight">
+      Geburtstage & Gartenfeste
+    </h2>
+
+    <p class="text-sand-800 text-sm leading-relaxed">
+      Feiere entspannt im eigenen Garten oder auf der gemieteten Wiese. Die Ape ist kompakt, passt durch die
+      meisten Hoftore und sorgt sofort für lockere, italienische Urlaubsstimmung.
+    </p>
+
+    <ul class="text-xs sm:text-sm text-sand-800 space-y-3 pt-2">
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Selbstbedienung oder Betreuung nach Absprache
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Platz für Bier, Wein, Softdrinks & Signature Drinks
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Kein aufwendiger Baraufbau für dich nötig
+      </li>
+    </ul>
+
+    <div class="pt-4">
+      <a href="index.html#kontakt"
+        class="inline-block px-7 py-3 rounded-full bg-mediterranean-500 text-white text-xs uppercase tracking-wider
+               font-bold shadow-md hover:bg-mediterranean-700 hover:-translate-y-0.5 transition-all">
+        Geburtstag anfragen
+      </a>
+    </div>
+  </div>
+
+  <div class="relative rounded-2xl overflow-hidden h-72 sm:h-96 border-4 border-white shadow-xl">
+    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=800&q=80"
+      alt="Gartenparty Drinks"
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+
+    <span
+      class="absolute bottom-4 right-4 px-4 py-2 bg-lemon-300 text-sand-900 rounded-full
+             text-sm font-serif italic font-bold shadow-lg">
+      La Dolce Vita 🍋
+    </span>
+  </div>
+</section>
+
+
+<!-- Sektion 4: Firmenevents -->
+<section id="firmenevents"
+  class="scroll-mt-28 relative overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-10 items-center
+         border-2 border-italianGreen-300
+         bg-gradient-to-br from-sand-50 via-olive-100/60 to-sand-50
+         rounded-3xl p-8 sm:p-12 shadow-lg">
+
+  <div class="absolute top-0 left-0 right-0 h-1.5 flex">
+    <div class="flex-1 bg-italianGreen-500"></div>
+    <div class="flex-1 bg-white"></div>
+    <div class="flex-1 bg-italianRed-500"></div>
+  </div>
+
+  <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden h-72 sm:h-96 border-4 border-white shadow-xl">
+    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80"
+      alt="Firmenevent Feier"
+      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+
+    <span
+      class="absolute bottom-4 left-4 px-4 py-2 bg-italianGreen-500 text-white rounded-full
+             text-sm font-serif italic font-bold shadow-lg">
+      Benvenuti! 🇮🇹
+    </span>
+  </div>
+
+  <div class="space-y-5 order-1 md:order-2">
+    <div
+      class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full
+             bg-italianGreen-100 text-italianGreen-700 text-xs font-bold shadow-sm">
+      💼 B2B & Mitarbeiterfeste
+    </div>
+
+    <h2 class="font-serif text-3xl sm:text-4xl text-italianGreen-700 font-bold leading-tight">
+      Firmenevents & Messen
+    </h2>
+
+    <p class="text-sand-800 text-sm leading-relaxed">
+      Überrascht eure Mitarbeiter beim Sommerfest, Weihnachtsmarkt oder Kunden auf der Messe. Ein lockerer
+      Treffpunkt für gute Gespräche und erfrischende Drinks.
+    </p>
+
+    <ul class="text-xs sm:text-sm text-sand-800 space-y-3 pt-2">
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Branding- & Werbeflächen möglich
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Zuverlässige Planung & ordnungsgemäße Abrechnung
+      </li>
+      <li class="flex items-center gap-3">
+        <span class="text-italianGreen-600 font-bold text-lg">✓</span>
+        Indoor & Outdoor flexibel einsetzbar
+      </li>
+    </ul>
+
+    <div class="pt-4">
+      <a href="index.html#kontakt"
+        class="inline-block px-7 py-3 rounded-full bg-italianGreen-500 text-white text-xs uppercase tracking-wider
+               font-bold shadow-md hover:bg-italianGreen-700 hover:-translate-y-0.5 transition-all">
+        Firmenevent buchen
+      </a>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-sand-200 py-8 text-center text-xs text-sand-800 space-y-3 mt-20">
+    <div class="flex justify-center items-center gap-6">
+      <a href="impressum.html" class="hover:text-olive-700 transition-colors">Impressum</a>
+      <span class="text-sand-300">•</span>
+      <a href="datenschutz.html" class="hover:text-olive-700 transition-colors">Datenschutz</a>
+    </div>
+    <p>© 2026 MORE APE por favor • Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <!-- Script für Mobile Navigation -->
+  <script src="assets/js/toogle.js">
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Über uns – Die Geschichte hinter MORE APE por favor und unserer mobilen Bar mit italienischem Flair.">
+  <title>Über uns | MORE APE por favor</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+ <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+
+                    colors: {
+
+                        /* Warmes italienisches Creme */
+                        sand: {
+                            50: '#FFF9E6',
+                            100: '#FFF0C2',
+                            200: '#F5D98B',
+                            300: '#E8BD62',
+                            800: '#62432E',
+                            900: '#3B271C',
+                        },
+
+                        /* Basilikum / Oliven */
+                        olive: {
+                            100: '#E3E8B6',
+                            300: '#A8B85B',
+                            500: '#6E8737',
+                            700: '#3F652F',
+                            800: '#294A25',
+                        },
+
+                        /* Pomodoro */
+                        tomato: {
+                            100: '#FFD8CE',
+                            300: '#FF8A70',
+                            500: '#E8422E',
+                            600: '#CE2E20',
+                            700: '#A92119',
+                        },
+
+                        /* Italienisches kräftiges Rot */
+                        italianRed: {
+                            100: '#FFD9D5',
+                            300: '#F5796E',
+                            500: '#D62828',
+                            600: '#B91F24',
+                            700: '#8E181D',
+                        },
+
+                        /* Amalfi-Zitrone */
+                        lemon: {
+                            100: '#FFF8B0',
+                            300: '#FFE35A',
+                            400: '#FFD92F',
+                            500: '#F7C900',
+                            600: '#D9A900',
+                        },
+
+                        /* Vespa / Mittelmeer */
+                        mediterranean: {
+                            100: '#D8F2F5',
+                            300: '#75CED9',
+                            500: '#209BAD',
+                            600: '#087F95',
+                            700: '#076274',
+                        },
+
+                        /* Terrakotta */
+                        terracotta: {
+                            100: '#F9DED0',
+                            300: '#E79A73',
+                            500: '#C65D38',
+                            600: '#A9472B',
+                            700: '#84351F',
+                        },
+
+                        /* Italienisches Grün */
+                        italianGreen: {
+                            100: '#D9EBD8',
+                            300: '#7EB47B',
+                            500: '#3D8B40',
+                            600: '#287431',
+                            700: '#1D5B27',
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+    </script>
+</head>
+<body class="bg-sand-50 text-sand-900 font-sans antialiased">
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-sand-50/95 backdrop-blur-md border-b border-sand-200">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-4 text-left self-center -ml-6 md:-ml-12 lg:-ml-16">
+                <!-- PNG/JPG Platzhalter -->
+
+                <div class="flex items-baseline gap-2">
+                    <span
+                        class="font-serif text-lg md:text-xl tracking-widest uppercase font-bold text-sand-900 leading-none">
+                        MORE APE
+                    </span>
+                    <span class="font-serif italic text-xs text-sand-600">
+                        por favor
+                    </span>
+                </div>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-sand-800">
+                <a href="index.html" class="hover:text-olive-700 transition-colors">Startseite</a>
+                <a href="anlaesse.html" class="hover:text-olive-700 transition-colors">Anlässe</a>
+                <a href="ueber-uns.html" class="text-olive-700 font-semibold transition-colors">Über uns</a>
+                <a href="index.html#kontakt" class="px-6 py-3 rounded-full 
+          bg-tomato-500 text-white
+          hover:bg-italianRed-600
+          transition-all font-bold">
+                    Jetzt anfragen
+                </a>
+            </nav>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menu-btn" type="button"
+                class="md:hidden p-2 rounded-lg text-sand-900 hover:bg-sand-100 focus:outline-none"
+                aria-label="Menü öffnen">
+                <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+                <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-b border-sand-200 bg-sand-50/98 px-6 py-6 space-y-4 shadow-lg">
+            <a href="index.html"
+                class="mobile-link block text-base font-medium text-sand-800 hover:text-olive-700 transition-colors">Startseite</a>
+            <a href="anlaesse.html"
+                class="mobile-link block text-base font-medium text-sand-800 hover:text-olive-700 transition-colors">Anlässe</a>
+            <a href="ueber-uns.html" class="mobile-link block text-base font-semibold text-olive-700">Über uns</a>
+            <div class="pt-2">
+                <a href="index.html#kontakt" class="mobile-link block text-center w-full py-3 rounded-xl 
+           bg-tomato-500 text-white font-semibold text-sm
+           hover:bg-italianRed-600 transition-all duration-300 shadow-md">
+                    Jetzt anfragen
+                </a>
+            </div>
+        </div>
+    </header>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-16">
+    
+    <!-- Hero / Intro -->
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
+      <span class="inline-block text-xs font-semibold tracking-widest text-olive-700 uppercase">
+        Unsere Geschichte
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl text-sand-900 leading-tight">
+        Aus Liebe zum italienischen Lebensgefühl
+      </h1>
+      <div class="flex items-center justify-center gap-3 pt-1">
+        <span class="h-px w-12 bg-sand-300"></span>
+        <span class="text-xs text-olive-700">♡</span>
+        <span class="h-px w-12 bg-sand-300"></span>
+      </div>
+    </div>
+
+    <!-- Story Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+      <div class="space-y-6 text-sand-800 text-sm sm:text-base leading-relaxed font-light">
+        <h2 class="font-serif text-2xl sm:text-3xl text-sand-900 font-normal">
+          Das Glück auf drei Rädern
+        </h2>
+        <p>
+          Die Idee zu <strong class="font-semibold text-sand-900">MORE APE por favor</strong> entstand aus einer einfachen Leidenschaft: Besondere Momente unvergesslich zu machen und Menschen bei einem guten Drink zusammenzubringen.
+        </p>
+        <p>
+          Unsere liebevoll restaurierte Piaggio Ape vereint den zeitlosen Charme der italienischen Riviera mit modernem Bar-Komfort. Ob für den ersten Toast als frisch vermähltes Ehepaar, den runden Geburtstag im eigenen Garten oder das Firmensommerfest – wir möchten eurer Feier das gewisse Extra verleihen.
+        </p>
+        <p>
+          Mit viel Liebe zum Detail, hochwertigen Accessoires wie unserem Boho-Sonnenschirm und eisgekühlten Wannen wird die Ape schnell zum absoluten Lieblingsplatz für euch und eure Gäste.
+        </p>
+      </div>
+
+      <!-- Bild / Showcase Box -->
+      <div class="rounded-3xl overflow-hidden border border-sand-200 shadow-md">
+        <img 
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80" 
+          alt="MORE APE Event Atmosphäre" 
+          class="w-full h-80 sm:h-96 object-cover"
+        >
+      </div>
+    </div>
+
+    <!-- Werte / Highlights -->
+    <div class="border-t border-sand-200 pt-16">
+      <div class="text-center mb-12">
+        <span class="text-xs uppercase tracking-widest text-olive-700 font-semibold">Was uns ausmacht</span>
+        <h2 class="font-serif text-3xl text-sand-900 mt-2">Warum mit uns feiern?</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="bg-white border border-sand-200 rounded-2xl p-7 text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-sand-100 flex items-center justify-center text-olive-700 text-xl font-serif">
+            1
+          </div>
+          <h3 class="font-serif font-semibold text-sand-900 text-lg">Liebe zum Detail</h3>
+          <p class="text-xs text-sand-800 leading-relaxed font-light">
+            Vom Vintage-Sonnenschirm über stilvolle Zinkwannen bis zur passenden Deko – alles ist stimmig abgestimmt.
+          </p>
+        </div>
+
+        <div class="bg-white border border-sand-200 rounded-2xl p-7 text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-sand-100 flex items-center justify-center text-olive-700 text-xl font-serif">
+            2
+          </div>
+          <h3 class="font-serif font-semibold text-sand-900 text-lg">Flexibel & Mobil</h3>
+          <p class="text-xs text-sand-800 leading-relaxed font-light">
+            Dank kompakter Dreirad-Maße passt die Ape fast überall hin – ob Schlosshof, Garten oder Hallen-Foyer.
+          </p>
+        </div>
+
+        <div class="bg-white border border-sand-200 rounded-2xl p-7 text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-full bg-sand-100 flex items-center justify-center text-olive-700 text-xl font-serif">
+            3
+          </div>
+          <h3 class="font-serif font-semibold text-sand-900 text-lg">Einfach & Verlässlich</h3>
+          <p class="text-xs text-sand-800 leading-relaxed font-light">
+            Pünktliche Anlieferung, unkomplizierter Aufbau und transparente Absprachen ohne versteckte Kosten.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call-to-Action Banner -->
+    <div class="mt-20 border border-sand-200 bg-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-sm">
+      <h2 class="font-serif text-3xl text-sand-900">Lass uns dein Event planen</h2>
+      <p class="text-sand-800 text-sm max-w-md mx-auto leading-relaxed font-light">
+        Sichere dir rechtzeitig deinen Wunschtermin für die Saison. Wir freuen uns auf deine Nachricht!
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-4 pt-2">
+        <a href="index.html#kontakt" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-olive-700 text-white font-medium hover:bg-olive-800 transition-all text-sm font-semibold shadow-sm">
+          Termin unverbindlich anfragen
+        </a>
+        <a href="https://instagram.com/moreapeporfavor" target="_blank" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-sand-100 border border-sand-200 text-sand-900 font-medium hover:bg-sand-200 transition-all text-sm">
+          @moreapeporfavor auf Instagram
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-sand-200 py-8 text-center text-xs text-sand-800 space-y-3 mt-20">
+    <div class="flex justify-center items-center gap-6">
+      <a href="impressum.html" class="hover:text-olive-700 transition-colors">Impressum</a>
+      <span class="text-sand-300">•</span>
+      <a href="datenschutz.html" class="hover:text-olive-700 transition-colors">Datenschutz</a>
+    </div>
+    <p>© 2026 MORE APE por favor • Alle Rechte vorbehalten.</p>
+  </footer>
+
+  <!-- Script für Mobile Navigation -->
+  <script src="assets/js/toogle.js">
+  
+  </script>
+
+</body>
+</html>
